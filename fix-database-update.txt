@@ -1,0 +1,14 @@
+This is due to a missmatch between the databases versions you said you are using in the settings.
+
+Please follow this steps:
+
+1) Go to /wp-include/ folder and open the version.php.
+2) Find the value for  $wp_db_version, and write it down.
+3) Now, open your database, check in the table called wp_options
+4) Find the db_version value:
+
+SELECT option_value FROM yourdatabase.wp_options WHERE option_name = 'db_version';
+
+5) Those two values must be the same. Change it in the version.php file, not the database.
+
+Source: http://wpquestions.com/question/showChrono/id/4151
