@@ -1,0 +1,7 @@
+add_filter( 'avatar_defaults', 'newgravatar' );
+
+function newgravatar ($avatar_defaults) {
+$myavatar = get_bloginfo('template_directory') . '/images/gravataricon.gif';
+$avatar_defaults[$myavatar] = &quot;WPBeginner&quot;;
+return $avatar_defaults;
+}
