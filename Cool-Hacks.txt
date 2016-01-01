@@ -1,0 +1,8 @@
+/*
+* Keep logged in WordPress for a longer period
+*/
+
+add_filter( 'auth_cookie_expiration', 'stay_logged_in_for_1_year' );
+function stay_logged_in_for_1_year( $expire ) {
+  return 31556926; // 1 year in seconds
+}
