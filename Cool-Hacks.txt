@@ -6,3 +6,15 @@ add_filter( 'auth_cookie_expiration', 'stay_logged_in_for_1_year' );
 function stay_logged_in_for_1_year( $expire ) {
   return 31556926; // 1 year in seconds
 }
+
+
+/*
+* Disable self-ping / self-trackback
+*/
+function no_self_ping( &$links ) {
+    $home = get_option( 'home' );
+    foreach ( $links as $l => $link )
+        if ( 0 === strpos( $link, $home ) )
+            unset($links[$l]);
+}
+add_action( 'pre_ping', 'no_self_ping' );
