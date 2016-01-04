@@ -1,4 +1,10 @@
 #Change default directory page
 DirectoryIndex CL3500.php
 
+//Prevent viewing of .htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
 #Source: http://www.htaccessredirect.net/
