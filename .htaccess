@@ -8,3 +8,8 @@ deny from all
 </Files>
 
 #Source: http://www.htaccessredirect.net/
+
+#Redirect to www
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^mydomain.com [NC]
+RewriteRule ^(.*)$ http://www.mydomain.com/$1 [R=301,L]
