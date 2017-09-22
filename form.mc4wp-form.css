@@ -1,0 +1,29 @@
+form.mc4wp-form {
+    background-color: #03A9F4;
+    padding: 40px 20px 20px;
+}
+form.mc4wp-form input[type="text"], form.mc4wp-form input[type="email"] {
+    color: black;
+    background-color: #ffffff;
+    border: 1px solid black;
+    padding: 20px 15px 18px;
+}
+form.mc4wp-form input[type="submit"] {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.51px;
+    background-color: white;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+form.mc4wp-form input[type="submit"]:hover {
+    color: white;
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
